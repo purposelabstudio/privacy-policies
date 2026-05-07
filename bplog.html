@@ -30,10 +30,10 @@
 <body>
     <h1>Privacy Policy</h1>
     <p class="developer">BP Log — Blood Pressure Tracker</p>
-    <p class="updated">Last updated: May 5, 2026</p>
+    <p class="updated">Last updated: May 7, 2026</p>
 
     <div class="highlight">
-        <strong>BP Log does NOT collect any personal data.</strong> The app operates entirely offline on your device. No data is ever transmitted to any server.
+        <strong>BP Log stores readings locally on your device and also sends limited telemetry to Google Firebase and Google Play services</strong> for analytics, crash reporting, and install attribution.
     </div>
 
     <h2>Data Stored Locally on Your Device</h2>
@@ -46,35 +46,47 @@
         <li>App preferences (reminder settings, display preferences)</li>
     </ul>
 
+    <h2>Data Sent Off Device</h2>
+    <p>BP Log currently sends the following categories of data to Google service providers:</p>
+    <ul>
+        <li>App activity and usage events, such as screen views, reminder changes, and export taps</li>
+        <li>Crash diagnostics and performance-related information</li>
+        <li>Install referrer information from the Google Play Install Referrer API</li>
+        <li>Device and advertising identifiers that may be used by integrated Google and Firebase SDKs</li>
+        <li>Limited health-related analytics fields when readings are saved or updated, such as systolic, diastolic, pulse, category, arm, position, tag count, and whether a note was added</li>
+    </ul>
+
     <h2>Data NOT Collected</h2>
     <ul>
         <li>No personal identification information (name, email, phone number)</li>
         <li>No location data</li>
-        <li>No device identifiers</li>
-        <li>No usage analytics or crash reports</li>
-        <li>No health data is transmitted to any server</li>
+        <li>No account credentials</li>
+        <li>No payment or financial information</li>
+        <li>No contacts, photos, microphone, or camera data</li>
     </ul>
 
     <h2>Data Storage</h2>
-    <p>All data is stored locally on your Android device using an application-private database. The data is sandboxed within the app's private storage and cannot be accessed by other applications.</p>
+    <p>Your readings are stored locally in the app's private database on your Android device. This database is protected by Android app sandboxing, but BP Log does not currently add its own database-level encryption layer. Device-level encryption may apply depending on your Android device and settings.</p>
 
     <h2>Data Sharing</h2>
-    <p><strong>BP Log does NOT share your data with any third parties.</strong> There are no advertising SDKs, analytics services, cloud synchronization, server-side storage, or third-party data processors.</p>
+    <p>BP Log uses Google Firebase and Google Play services as service providers for analytics, crash reporting, and install attribution. BP Log does not sell your personal data and does not share your locally stored readings with unrelated third parties for advertising or data brokerage purposes.</p>
 
     <h2>Data Export</h2>
     <p>You may choose to export your data as PDF or CSV files using the app's export feature. Exported files are saved to your device and shared only through your explicit action (e.g., email, messaging).</p>
 
     <h2>Data Deletion</h2>
-    <p>You can delete individual readings within the app at any time. To delete all app data, uninstall the app or clear the app's data through Android Settings.</p>
+    <p>You can delete individual readings within the app at any time. To delete all locally stored app data, uninstall the app or clear the app's data through Android Settings.</p>
+    <p>Telemetry that has already been sent to Google Firebase or Google Play services may be retained according to those providers' retention practices and is not currently deleted through an in-app request flow.</p>
 
     <h2>Internet Permission</h2>
-    <p>BP Log does NOT require internet access. The app does not request the INTERNET permission in its Android manifest.</p>
+    <p>BP Log requests INTERNET and ACCESS_NETWORK_STATE permissions so analytics, crash reporting, and install attribution services can communicate with Google servers.</p>
+    <p>When data is transmitted off device by these services, it is sent over encrypted network connections. BP Log does not configure cleartext HTTP traffic for its own network use.</p>
 
     <h2>Children's Privacy</h2>
-    <p>BP Log does not knowingly collect data from children under 13. The app is rated "Everyone" and contains no age-restricted content.</p>
+    <p>BP Log does not knowingly target children and does not offer children's features. Any health-related data entered into the app should be added only by users or caregivers who are authorized to manage that information.</p>
 
     <h2>Medical Disclaimer</h2>
-    <p>BP Log is for recording and tracking purposes only. The app does not measure blood pressure and does not provide medical advice, diagnosis, or treatment. Always consult your healthcare provider for medical decisions.</p>
+    <p>BP Log is for recording and tracking purposes only. The app is not a medical device and does not diagnose, treat, cure, or prevent any medical condition. The app does not measure blood pressure and does not provide medical advice. Always consult your healthcare provider for medical decisions.</p>
 
     <h2>Changes to This Policy</h2>
     <p>We may update this privacy policy from time to time. Changes will be reflected in the "Last updated" date above. Continued use of the app after changes constitutes acceptance of the revised policy.</p>
