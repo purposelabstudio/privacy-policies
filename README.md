@@ -4,14 +4,16 @@ Public repository hosting privacy policies for all PurposeLab apps.
 
 ## Apps
 
-| App | Policy | Play Store |
-|-----|--------|------------|
-| BP Log — Blood Pressure Tracker | [bplog.html](https://purposelabstudio.github.io/privacy-policies/bplog.html) | [Play Store](https://play.google.com/store/apps/details?id=com.purposelab.bplog) |
+| App | Policy |
+|-----|--------|
+| BP Log — Blood Pressure Tracker | [bplog.html](https://purposelabstudio.github.io/privacy-policies/bplog.html) |
+| Hushly — Baby Sleep Sounds | [hushly.html](https://purposelabstudio.github.io/privacy-policies/hushly.html) |
 
 ## URLs
 
 - **Index**: https://purposelabstudio.github.io/privacy-policies/
 - **BP Log**: https://purposelabstudio.github.io/privacy-policies/bplog.html
+- **Hushly**: https://purposelabstudio.github.io/privacy-policies/hushly.html
 
 ## Adding a New App
 
