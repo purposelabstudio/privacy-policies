@@ -4,42 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Folio — Privacy Policy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #FAF7F2;
-            color: #2C2C2C;
-            line-height: 1.7;
-            padding: 24px;
-            max-width: 720px;
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #FAF6F0;
+            color: #2D2A26;
+            line-height: 1.8;
+            padding: 48px 24px;
+            max-width: 680px;
             margin: 0 auto;
         }
-        h1 { font-size: 28px; margin-bottom: 4px; color: #1A1A1A; }
-        h2 { font-size: 18px; margin-top: 28px; margin-bottom: 8px; color: #5C4033; }
-        p { margin-bottom: 16px; color: #2C2C2CCC; font-size: 15px; }
-        .date { font-size: 13px; color: #2C2C2C80; margin-bottom: 24px; }
-        .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #E8E0D8; font-size: 13px; color: #2C2C2C60; }
-        a { color: #5C4033; text-decoration: none; }
+        .header {
+            text-align: center;
+            margin-bottom: 48px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid #E8E2D8;
+        }
+        .brand {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #C4A87C;
+            margin-bottom: 16px;
+        }
+        h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #2D2A26;
+            margin-bottom: 8px;
+        }
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 12px;
+            color: #2D2A26;
+        }
+        p {
+            margin-bottom: 16px;
+            color: #2D2A26CC;
+            font-size: 15px;
+            font-weight: 400;
+        }
+        .date {
+            font-size: 13px;
+            color: #2D2A2680;
+        }
+        .highlight {
+            background: #F5F0E8;
+            border-left: 3px solid #C4A87C;
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 24px 0;
+        }
+        .highlight p {
+            margin-bottom: 0;
+            font-weight: 500;
+            color: #2D2A26;
+        }
+        ul {
+            margin: 0 0 16px 0;
+            padding: 0;
+            list-style: none;
+            color: #2D2A26CC;
+            font-size: 15px;
+        }
+        li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+        li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 6px;
+            height: 6px;
+            background: #C4A87C;
+            border-radius: 50%;
+        }
+        strong { color: #2D2A26; font-weight: 500; }
+        a { color: #C4A87C; text-decoration: none; font-weight: 500; }
         a:hover { text-decoration: underline; }
-        ul { margin: 0 0 16px 20px; color: #2C2C2CCC; font-size: 15px; }
-        li { margin-bottom: 8px; }
+        .footer {
+            margin-top: 56px;
+            padding-top: 24px;
+            border-top: 1px solid #E8E2D8;
+            text-align: center;
+            font-size: 13px;
+            color: #2D2A2660;
+        }
+        .footer a { color: #A08560; }
+        .section-divider {
+            width: 40px;
+            height: 2px;
+            background: #E8DCC8;
+            margin: 40px auto 0;
+            border-radius: 1px;
+        }
+        @media (max-width: 480px) {
+            body { padding: 32px 20px; }
+            h1 { font-size: 26px; }
+            h2 { font-size: 18px; }
+        }
     </style>
 </head>
 <body>
-    <h1>Privacy Policy</h1>
-    <p class="date">Last updated: May 2026</p>
+    <div class="header">
+        <p class="brand">Folio</p>
+        <h1>Privacy Policy</h1>
+        <p class="date">Last updated: May 2026</p>
+    </div>
 
     <h2>Overview</h2>
-    <p>Folio ("the App") is a quiet digital notebook for closing the day, developed by PurposeLab Studio. We believe your words are yours alone. This policy explains what data we collect (very little), how we handle it, and your rights.</p>
+    <p>Folio is a quiet digital notebook for closing the day, developed by PurposeLab Studio. We believe your words are yours alone. This policy explains what data we collect (very little), how we handle it, and your rights.</p>
     <p>This policy applies to both the Android (Google Play) and iOS (App Store) versions of Folio.</p>
+
+    <div class="highlight">
+        <p>We never read, access, analyze, or transmit your journal entries. Your writing stays yours.</p>
+    </div>
 
     <h2>Data We Collect</h2>
     <p>Folio does not collect any personal data. We do not require accounts, email addresses, phone numbers, names, or any other personally identifiable information (PII) to use the core features of the App.</p>
     <p>The App collects the following anonymous, non-identifying data:</p>
     <ul>
-        <li><strong>Crash reports</strong> (via Firebase Crashlytics): Stack traces and device metadata when the app crashes. This data cannot identify individual users. No journal content is ever included.</li>
-        <li><strong>Basic usage analytics</strong> (via Firebase Analytics): Anonymous, aggregated events such as screen views and feature usage patterns. No PII or journal content is collected. Advertising ID collection is disabled.</li>
+        <li><strong>Crash reports</strong> (via Firebase Crashlytics) — Stack traces and device metadata when the app crashes. This data cannot identify individual users. No journal content is ever included.</li>
+        <li><strong>Basic usage analytics</strong> (via Firebase Analytics) — Anonymous, aggregated events such as screen views and feature usage patterns. No PII or journal content is collected. Advertising ID collection is disabled.</li>
     </ul>
 
     <h2>Data Storage</h2>
@@ -56,23 +155,20 @@
     <h2>Permissions</h2>
     <p>The App may request the following permissions:</p>
     <ul>
-        <li><strong>Notifications (Android 13+ / iOS):</strong> To send a gentle evening reminder to write your daily page. You can deny or disable this at any time in device Settings.</li>
-        <li><strong>Biometric / Face ID / Device Credentials:</strong> Only requested if you enable App Lock. Used solely to authenticate you locally — no biometric data is collected, stored, or transmitted by the App.</li>
-        <li><strong>Internet Access:</strong> Required only for optional backup (Google Drive / iCloud), in-app purchases, and anonymous crash/analytics reporting. The core journaling experience works fully offline.</li>
+        <li><strong>Notifications (Android 13+ / iOS)</strong> — To send a gentle evening reminder to write your daily page. You can deny or disable this at any time in device Settings.</li>
+        <li><strong>Biometric / Face ID / Device Credentials</strong> — Only requested if you enable App Lock. Used solely to authenticate you locally — no biometric data is collected, stored, or transmitted by the App.</li>
+        <li><strong>Internet Access</strong> — Required only for optional backup (Google Drive / iCloud), in-app purchases, and anonymous crash/analytics reporting. The core journaling experience works fully offline.</li>
     </ul>
 
     <h2>Third-Party Services</h2>
     <ul>
-        <li><strong>Firebase Crashlytics:</strong> Anonymous crash reports to help us fix bugs. No PII is collected. Advertising ID collection is disabled.</li>
-        <li><strong>Firebase Analytics:</strong> Anonymous, aggregated usage events. No PII or journal content is collected. Advertising ID collection is disabled.</li>
-        <li><strong>Google Sign-In:</strong> Authentication for Google Drive backup only. Basic profile info (name, email) is used locally to show the connected account.</li>
-        <li><strong>Google Drive API:</strong> Used only if you opt into Google Drive backup. Minimum scope for a single app-specific file.</li>
-        <li><strong>Apple CloudKit / iCloud:</strong> Used only if you opt into iCloud backup on iOS.</li>
-        <li><strong>Google Play Billing / Apple StoreKit:</strong> Used for subscriptions or one-time purchases. Google/Apple processes payment information directly — Folio never sees or stores your payment details.</li>
+        <li><strong>Firebase Crashlytics</strong> — Anonymous crash reports to help us fix bugs. No PII is collected. Advertising ID collection is disabled.</li>
+        <li><strong>Firebase Analytics</strong> — Anonymous, aggregated usage events. No PII or journal content is collected.</li>
+        <li><strong>Google Sign-In</strong> — Authentication for Google Drive backup only. Basic profile info (name, email) is used locally to show the connected account.</li>
+        <li><strong>Google Drive API</strong> — Used only if you opt into Google Drive backup. Minimum scope for a single app-specific file.</li>
+        <li><strong>Apple CloudKit / iCloud</strong> — Used only if you opt into iCloud backup on iOS.</li>
+        <li><strong>Google Play Billing / Apple StoreKit</strong> — Used for subscriptions or one-time purchases. Google/Apple processes payment information directly — Folio never sees or stores your payment details.</li>
     </ul>
-
-    <h2>Your Journal Content</h2>
-    <p>We want to be explicit: <strong>we never read, access, analyze, or transmit your journal entries.</strong> Your writing stays on your device (or in your personal cloud storage if you choose to back up). There is no server-side processing of your content.</p>
 
     <h2>Data Sharing</h2>
     <p>We do not sell, trade, or share your data with third parties. We do not serve advertisements. We do not use ad tracking or retargeting.</p>
@@ -83,10 +179,10 @@
     <h2>Your Rights</h2>
     <p>You have full control over your data:</p>
     <ul>
-        <li><strong>Delete app data:</strong> Clear the app's storage in your device Settings, or uninstall the app.</li>
-        <li><strong>Delete Google Drive backup:</strong> Remove the backup file directly from your Google Drive at any time.</li>
-        <li><strong>Delete iCloud backup:</strong> Remove the backup from your iCloud storage via iOS Settings.</li>
-        <li><strong>Revoke Google Sign-In:</strong> Disconnect from the App's settings, or revoke access from your Google Account permissions page.</li>
+        <li><strong>Delete app data</strong> — Clear the app's storage in your device Settings, or uninstall the app.</li>
+        <li><strong>Delete Google Drive backup</strong> — Remove the backup file directly from your Google Drive at any time.</li>
+        <li><strong>Delete iCloud backup</strong> — Remove the backup from your iCloud storage via iOS Settings.</li>
+        <li><strong>Revoke Google Sign-In</strong> — Disconnect from the App's settings, or revoke access from your Google Account permissions page.</li>
     </ul>
     <p>Since we don't collect personal data on our servers, there is nothing to request deletion of on our end.</p>
 
@@ -103,8 +199,10 @@
     <p>We may update this policy from time to time. Changes will be reflected in the "Last updated" date above. Continued use of the App constitutes acceptance of the updated policy.</p>
 
     <div class="footer">
-        <p>PurposeLab Studio &middot; Your words stay yours<br>
-        <a href="https://play.google.com/store/apps/details?id=com.purposelab.folio">Folio on Google Play</a> · <a href="https://apps.apple.com/app/folio">Folio on App Store</a></p>
+        <p>PurposeLab Studio &middot; Your words stay yours</p>
+        <p style="margin-top: 8px;">
+            <a href="https://play.google.com/store/apps/details?id=com.purposelab.folio">Google Play</a> &middot; <a href="https://apps.apple.com/app/folio">App Store</a>
+        </p>
     </div>
 </body>
 </html>
