@@ -22,6 +22,8 @@
         .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #E8E0D8; font-size: 13px; color: #2C2C2C60; }
         a { color: #5C4033; text-decoration: none; }
         a:hover { text-decoration: underline; }
+        ul { margin: 0 0 16px 20px; color: #2C2C2CCC; font-size: 15px; }
+        li { margin-bottom: 8px; }
     </style>
 </head>
 <body>
@@ -30,30 +32,47 @@
 
     <h2>Overview</h2>
     <p>Folio ("the App") is a quiet digital notebook for closing the day, developed by PurposeLab Studio. We believe your words are yours alone. This policy explains what data we collect (very little), how we handle it, and your rights.</p>
+    <p>This policy applies to both the Android (Google Play) and iOS (App Store) versions of Folio.</p>
 
     <h2>Data We Collect</h2>
-    <p>Folio does not collect any personal data. We do not require accounts, email addresses, phone numbers, names, or any other personally identifiable information (PII).</p>
-    <p>The App may collect anonymous, aggregated crash reports (via Firebase Crashlytics) to improve stability. This data cannot identify individual users. No analytics tracking is performed on your journal content.</p>
+    <p>Folio does not collect any personal data. We do not require accounts, email addresses, phone numbers, names, or any other personally identifiable information (PII) to use the core features of the App.</p>
+    <p>The App collects the following anonymous, non-identifying data:</p>
+    <ul>
+        <li><strong>Crash reports</strong> (via Firebase Crashlytics): Stack traces and device metadata when the app crashes. This data cannot identify individual users. No journal content is ever included.</li>
+        <li><strong>Basic usage analytics</strong> (via Firebase Analytics): Anonymous, aggregated events such as screen views and feature usage patterns. No PII or journal content is collected. Advertising ID collection is disabled.</li>
+    </ul>
 
     <h2>Data Storage</h2>
-    <p>All your journal entries, daily marks, monthly themes, habits, and preferences are stored locally on your device in an SQLite database. This data never leaves your device and is not transmitted to any server.</p>
-    <p>If you use the optional Google Drive backup feature, your data is transferred directly between your device and your personal Google Drive account. PurposeLab does not have access to your Google Drive or your backed-up data.</p>
+    <p>All your journal entries, daily marks, monthly themes, habits, and preferences are stored locally on your device in an encrypted SQLite database. This data never leaves your device unless you explicitly choose to back it up.</p>
+
+    <h2>Backup &amp; Sync</h2>
+    <p><strong>Google Drive Backup (Android &amp; iOS):</strong> If you choose to enable backup, your data is transferred directly between your device and your personal Google Drive account. PurposeLab does not have access to your Google Drive or your backed-up data. We request the minimum scope needed to read/write a single app-specific backup file.</p>
+    <p><strong>iCloud Backup (iOS):</strong> If you choose to enable iCloud backup, your data is stored in your personal iCloud account using Apple's CloudKit infrastructure. PurposeLab does not have access to your iCloud data.</p>
+    <p>Both backup options are entirely optional. The App works fully offline without any backup configured.</p>
+
+    <h2>Authentication</h2>
+    <p><strong>Google Sign-In:</strong> Used solely to authenticate your identity for Google Drive backup and restore. We access only your basic profile (name and email) to display which account is connected. We do not store your Google credentials, and your account information is not transmitted to our servers or used for any other purpose. You can disconnect at any time from the App's settings.</p>
 
     <h2>Permissions</h2>
     <p>The App may request the following permissions:</p>
-    <p>
-        <strong>Post Notifications (Android 13+):</strong> To send a gentle evening reminder to write your daily page. You can deny or disable this at any time in Settings.<br><br>
-        <strong>Biometric / Device Credentials:</strong> Only requested if you enable App Lock. Used solely to authenticate you locally — no biometric data is collected or stored by the App.<br><br>
-        <strong>Internet Access:</strong> Required only for optional Google Drive backup and in-app purchases. The App works fully offline.
-    </p>
+    <ul>
+        <li><strong>Notifications (Android 13+ / iOS):</strong> To send a gentle evening reminder to write your daily page. You can deny or disable this at any time in device Settings.</li>
+        <li><strong>Biometric / Face ID / Device Credentials:</strong> Only requested if you enable App Lock. Used solely to authenticate you locally — no biometric data is collected, stored, or transmitted by the App.</li>
+        <li><strong>Internet Access:</strong> Required only for optional backup (Google Drive / iCloud), in-app purchases, and anonymous crash/analytics reporting. The core journaling experience works fully offline.</li>
+    </ul>
 
     <h2>Third-Party Services</h2>
-    <p><strong>Google Play Billing:</strong> Used for subscriptions or one-time purchases. Google processes payment information directly — Folio never sees or stores your payment details.</p>
-    <p><strong>Firebase Crashlytics:</strong> Anonymous crash reports to help us fix bugs. No PII is collected. Advertising ID collection is disabled.</p>
-    <p><strong>Google Drive API:</strong> Used only if you opt into backup. We request the minimum scope needed to read/write a single app-specific backup file in your Drive.</p>
+    <ul>
+        <li><strong>Firebase Crashlytics:</strong> Anonymous crash reports to help us fix bugs. No PII is collected. Advertising ID collection is disabled.</li>
+        <li><strong>Firebase Analytics:</strong> Anonymous, aggregated usage events. No PII or journal content is collected. Advertising ID collection is disabled.</li>
+        <li><strong>Google Sign-In:</strong> Authentication for Google Drive backup only. Basic profile info (name, email) is used locally to show the connected account.</li>
+        <li><strong>Google Drive API:</strong> Used only if you opt into Google Drive backup. Minimum scope for a single app-specific file.</li>
+        <li><strong>Apple CloudKit / iCloud:</strong> Used only if you opt into iCloud backup on iOS.</li>
+        <li><strong>Google Play Billing / Apple StoreKit:</strong> Used for subscriptions or one-time purchases. Google/Apple processes payment information directly — Folio never sees or stores your payment details.</li>
+    </ul>
 
     <h2>Your Journal Content</h2>
-    <p>We want to be explicit: <strong>we never read, access, analyze, or transmit your journal entries.</strong> Your writing stays on your device (or in your personal Google Drive if you choose to back up). There is no server-side processing of your content.</p>
+    <p>We want to be explicit: <strong>we never read, access, analyze, or transmit your journal entries.</strong> Your writing stays on your device (or in your personal cloud storage if you choose to back up). There is no server-side processing of your content.</p>
 
     <h2>Data Sharing</h2>
     <p>We do not sell, trade, or share your data with third parties. We do not serve advertisements. We do not use ad tracking or retargeting.</p>
@@ -62,8 +81,20 @@
     <p>Folio is not directed at children under 13. We do not knowingly collect data from children. Since no personal data is collected from any user, the App is compliant with COPPA.</p>
 
     <h2>Your Rights</h2>
-    <p>You can delete all app data at any time by clearing the app's storage in Android Settings, or by uninstalling the app. Since we don't collect personal data on our servers, there is nothing to request deletion of on our end.</p>
-    <p>If you have used Google Drive backup, you can delete the backup file directly from your Google Drive at any time.</p>
+    <p>You have full control over your data:</p>
+    <ul>
+        <li><strong>Delete app data:</strong> Clear the app's storage in your device Settings, or uninstall the app.</li>
+        <li><strong>Delete Google Drive backup:</strong> Remove the backup file directly from your Google Drive at any time.</li>
+        <li><strong>Delete iCloud backup:</strong> Remove the backup from your iCloud storage via iOS Settings.</li>
+        <li><strong>Revoke Google Sign-In:</strong> Disconnect from the App's settings, or revoke access from your Google Account permissions page.</li>
+    </ul>
+    <p>Since we don't collect personal data on our servers, there is nothing to request deletion of on our end.</p>
+
+    <h2>Data Retention</h2>
+    <p>We do not retain any personal data. Anonymous crash reports and analytics data are retained by Firebase for up to 90 days and cannot be linked to individual users.</p>
+
+    <h2>Security</h2>
+    <p>Your journal data is stored in the app's private sandboxed storage, inaccessible to other apps. If you enable App Lock, biometric or device credential authentication is required to access the app. Backup transfers use encrypted connections (HTTPS/TLS).</p>
 
     <h2>Contact</h2>
     <p>If you have questions about this privacy policy, contact us at: <a href="mailto:hello@purposelab.studio">hello@purposelab.studio</a></p>
@@ -73,7 +104,7 @@
 
     <div class="footer">
         <p>PurposeLab Studio &middot; Your words stay yours<br>
-        <a href="https://play.google.com/store/apps/details?id=com.purposelab.folio">Folio on Google Play</a></p>
+        <a href="https://play.google.com/store/apps/details?id=com.purposelab.folio">Folio on Google Play</a> · <a href="https://apps.apple.com/app/folio">Folio on App Store</a></p>
     </div>
 </body>
 </html>
