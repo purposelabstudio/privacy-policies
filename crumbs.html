@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crumbs | Privacy Policy</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #F5F1E8;
+            color: #243534;
+            line-height: 1.7;
+            padding: 24px;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        h1 { font-size: 28px; margin-bottom: 4px; }
+        h2 { font-size: 18px; margin-top: 28px; margin-bottom: 8px; color: #2C5556; }
+        p { margin-bottom: 16px; color: #243534CC; font-size: 15px; }
+        ul { margin: 0 0 16px 20px; color: #243534CC; font-size: 15px; }
+        li { margin-bottom: 8px; }
+        .date { font-size: 13px; color: #24353480; margin-bottom: 24px; }
+        .callout { background: #FFFFFF; border-left: 3px solid #B8892B; padding: 14px 16px; margin-bottom: 20px; border-radius: 4px; }
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #DDD5C4; font-size: 13px; color: #24353499; }
+        a { color: #2C5556; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>Privacy Policy</h1>
+    <p class="date">Last updated: August 2026</p>
+
+    <h2>Overview</h2>
+    <p>Crumbs ("the Service") is a thought-capture assistant you use inside WhatsApp, built by PurposeLab Studio. This policy explains what we store, where it goes, and what you can do about it.</p>
+
+    <div class="callout">
+        <p style="margin-bottom:0"><strong>Read this part first.</strong> Crumbs is different from our other apps. Folio, WaterWise, BP Log and Hushly keep everything on your phone. Crumbs cannot: it has to receive your message, understand it, and store it so it can hand it back later. That means your crumbs are held on our servers and are sent to an AI provider to be processed. If you are not comfortable with that, please do not send anything to Crumbs that you would not want stored.</p>
+    </div>
+
+    <h2>What we collect</h2>
+    <ul>
+        <li><strong>Your WhatsApp phone number.</strong> This is how your account is identified. There is no separate signup, so the number is the account.</li>
+        <li><strong>The content you send.</strong> Notes, ideas, to-dos, reminders, links, photos, voice notes, contacts and locations, plus anything Crumbs derives from them, such as an extracted task or a due date.</li>
+        <li><strong>Account settings.</strong> Your digest preferences, pause state, plan, referral counters and similar.</li>
+        <li><strong>Message logs.</strong> Records of messages exchanged with the Service, used for delivery, de-duplication, debugging and abuse prevention.</li>
+    </ul>
+
+    <h2>Where your data is stored</h2>
+    <p>Your crumbs and account record are stored in Cloudflare D1, a managed SQLite database, and the Service runs on Cloudflare Workers. Data is encrypted in transit and encrypted at rest by the platform. We do not run our own separate copy of your data elsewhere.</p>
+
+    <h2>AI processing (please read)</h2>
+    <p>Crumbs uses AI to work out what you meant, transcribe voice notes, read text out of images, and find the right item when you ask for something back. To do that, <strong>the content of your messages is sent to Google's Gemini API</strong>, and images may additionally be processed by Cloudflare AI. This happens every time you send a crumb or ask a question.</p>
+    <p>We send the minimum needed for the task, and we do not sell your content or use it for advertising. We do not train our own models on your content. However, once content is sent to an AI provider it is subject to that provider's own terms, so please also read <a href="https://ai.google.dev/gemini-api/terms" rel="noopener noreferrer">Google's Gemini API terms</a> and <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener noreferrer">Cloudflare's privacy policy</a>.</p>
+
+    <h2>Messaging</h2>
+    <p>Crumbs is delivered over the WhatsApp Cloud API, operated by Meta. Your messages to and from Crumbs pass through WhatsApp's infrastructure and are also governed by <a href="https://www.whatsapp.com/legal/privacy-policy" rel="noopener noreferrer">WhatsApp's privacy policy</a>. Note that messages with a business are not end-to-end encrypted in the same way as personal chats, because the business (in this case, Crumbs) has to be able to read them in order to reply.</p>
+
+    <h2>Payments</h2>
+    <p>Paid plans are handled by Razorpay. Razorpay processes your payment details directly; Crumbs never sees or stores your card or bank information. We store only the resulting plan and its expiry date.</p>
+
+    <h2>Third parties we use</h2>
+    <ul>
+        <li><strong>Cloudflare</strong> for hosting, database and image AI.</li>
+        <li><strong>Google (Gemini API)</strong> for understanding text and voice.</li>
+        <li><strong>Meta (WhatsApp Cloud API)</strong> for sending and receiving messages.</li>
+        <li><strong>Razorpay</strong> for payments.</li>
+    </ul>
+    <p>We do not sell, rent or trade your data. We do not serve advertisements and we do not use ad tracking or retargeting.</p>
+
+    <h2>Your rights</h2>
+    <ul>
+        <li><strong>Export.</strong> You can export your crumbs as JSON on any plan, including the free one. Additional formats are available on the Max plan.</li>
+        <li><strong>Delete.</strong> You can delete individual crumbs, or ask Crumbs to delete your whole account and its contents. Deletion of an account is confirmed before it runs.</li>
+        <li><strong>Pause.</strong> You can tell Crumbs to stop messaging you at any time, and it will.</li>
+        <li><strong>Access and correction.</strong> Write to us at the address below and we will help.</li>
+    </ul>
+
+    <h2>Data retention</h2>
+    <p>Your crumbs are kept until you delete them or delete your account, because the whole point of the Service is that it still has them later. Operational message logs are kept only as long as they are useful for delivery, debugging and abuse prevention. When you delete your account, your crumbs and account record are removed from our database; backups and provider-side logs may persist for a short period before they age out.</p>
+
+    <h2>Security</h2>
+    <p>Incoming webhooks from WhatsApp and Razorpay are verified with HMAC signatures, repeat messages are de-duplicated, and administrative endpoints require a secret. Data is encrypted in transit and at rest by our infrastructure providers. No service can promise perfect security, and we do not.</p>
+
+    <h2>Children's privacy</h2>
+    <p>Crumbs is intended for adults (18+). It is not directed at children and we do not knowingly collect data from them.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy, or a request about your data: <a href="mailto:purposelab.studio@gmail.com">purposelab.studio@gmail.com</a></p>
+
+    <h2>Changes to this policy</h2>
+    <p>We may update this policy. Changes will show in the "Last updated" date above. Continued use of the Service after a change means you accept the updated policy.</p>
+
+    <div class="footer">
+        <p>PurposeLab Studio<br>
+        <a href="https://purposelabstudio.com/crumbs/">About Crumbs</a> &middot;
+        <a href="https://purposelabstudio.com/privacy-policies/crumbs-terms.html">Terms of Service</a></p>
+    </div>
+</body>
+</html>
