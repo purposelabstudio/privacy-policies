@@ -123,7 +123,7 @@
     <div class="header">
         <p class="brand">Folio</p>
         <h1>Privacy Policy</h1>
-        <p class="date">Last updated: July 2026</p>
+        <p class="date">Last updated: August 2026</p>
     </div>
 
     <h2>Overview</h2>
@@ -135,16 +135,17 @@
     </div>
 
     <h2>Data We Collect</h2>
-    <p>Folio does not collect any personal data. We do not require accounts, email addresses, phone numbers, names, or any other personally identifiable information (PII) to use the core features of the App.</p>
-    <p>The App collects the following anonymous, non-identifying data:</p>
+    <p>Folio does not require an account, email address, phone number, or name to use its core features. If you choose to send feedback, you may optionally provide an email address so we can reply.</p>
+    <p>The App collects the following limited data:</p>
     <ul>
         <li><strong>Crash reports</strong> (via Firebase Crashlytics) — Stack traces and device metadata when the app crashes. This data cannot identify individual users. No journal content is ever included.</li>
         <li><strong>Basic usage analytics</strong> (via Firebase Analytics) — Anonymous, aggregated events such as screen views and feature usage patterns. No PII or journal content is collected. Advertising ID collection is disabled. Anonymized user properties (such as active palette, acquisition source, and feature-usage buckets) are set for aggregate analytics — none contain journal text or PII.</li>
         <li><strong>Install attribution</strong> (Android only, via Play Install Referrer) — On first launch, the App reads the install referral parameters (UTM source, medium, campaign) provided by Google Play. This is a one-time, anonymous read used solely to understand how users discover Folio. No PII is collected.</li>
+        <li><strong>Feedback and support notes</strong> (optional, via Cloud Firestore) — If you tap “Share your thoughts” and press Send, we receive the note you typed, its category, an optional reply-to email, app version, platform, locale, submission identifier, and submission time. We use this only to answer support requests and improve Folio. Journal entries and other notebook content are never attached.</li>
     </ul>
 
     <h2>Data Storage</h2>
-    <p>All your journal entries, daily marks, monthly themes, habits, and preferences are stored locally on your device in an encrypted SQLite database. This data never leaves your device unless you explicitly choose to back it up.</p>
+    <p>All your journal entries, daily marks, monthly themes, habits, and preferences are stored locally in Folio's private app sandbox using SQLite. The operating system protects the app sandbox and device storage; you can also enable Folio's App Lock. This data never leaves your device unless you explicitly choose to back it up.</p>
     <p><strong>Home screen widgets:</strong> If you add Folio widgets to your home screen, a subset of your data (recent entries, habit scores, streak counts, mood, and palette colours) is shared from the App to the widget extension via on-device shared storage (SharedPreferences on Android, App Group container on iOS). This data never leaves your device and is inaccessible to other apps.</p>
 
     <h2>Purchases &amp; Entitlements</h2>
@@ -153,6 +154,10 @@
 
     <h2>Founding Circle (Cloud Firestore)</h2>
     <p>Folio offers a limited, free Founding Circle membership to early users. Claiming a membership increments a single anonymous global counter stored in Google Cloud Firestore (document path: <code>counters/founding</code>). This counter contains only a running integer — no user IDs, emails, names, journal content, or any other identifying information is written. The interaction is a one-time atomic increment; no ongoing connection to Firestore is maintained.</p>
+
+    <h2>Feedback &amp; Support (Cloud Firestore)</h2>
+    <p>Sending feedback is optional and always initiated by you. Your note is stored in Cloud Firestore and reviewed by PurposeLab for support and product improvement; Folio does not provide an in-app screen for browsing submissions. If the network is unavailable, the note is kept in the App's private on-device storage and retried later. Choosing “Erase everything” deletes any feedback still waiting on the device.</p>
+    <p>Feedback is normally retained for up to 12 months for support and product-improvement purposes. If you included an email address, you may request early deletion by contacting us from that address and providing the approximate submission date. Anonymous notes may not be identifiable after submission.</p>
 
     <h2>Backup &amp; Sync</h2>
     <p><strong>Google Drive Backup (Android &amp; iOS):</strong> If you choose to enable backup, your data is transferred directly between your device and your personal Google Drive account. PurposeLab does not have access to your Google Drive or your backed-up data. We request the minimum scope needed to read/write a single app-specific backup file.</p>
@@ -170,14 +175,14 @@
     <ul>
         <li><strong>Notifications (Android 13+ / iOS)</strong> — To send a gentle evening reminder to write your daily page. You can deny or disable this at any time in device Settings.</li>
         <li><strong>Biometric / Face ID / Device Credentials</strong> — Only requested if you enable App Lock. Used solely to authenticate you locally — no biometric data is collected, stored, or transmitted by the App.</li>
-        <li><strong>Internet Access</strong> — Required only for optional backup (Google Drive / iCloud), in-app purchases, Founding Circle claim, remote configuration, and anonymous crash/analytics reporting. The core journaling experience works fully offline.</li>
+        <li><strong>Internet Access</strong> — Required only for optional backup (Google Drive / iCloud), in-app purchases, Founding Circle claim, feedback you choose to send, remote configuration, and crash/analytics reporting. The core journaling experience works fully offline.</li>
     </ul>
 
     <h2>Third-Party Services</h2>
     <ul>
         <li><strong>Firebase Crashlytics</strong> (Google) — Anonymous crash reports to help us fix bugs. No PII is collected. Advertising ID collection is disabled.</li>
         <li><strong>Firebase Analytics</strong> (Google) — Anonymous, aggregated usage events and user properties. No PII or journal content is collected.</li>
-        <li><strong>Cloud Firestore</strong> (Google) — Used solely for the Founding Circle global counter (a single anonymous integer). No user data is stored.</li>
+        <li><strong>Cloud Firestore</strong> (Google) — Used for the anonymous Founding Circle counter and for feedback/support notes you explicitly send. Feedback may contain an optional reply-to email and the limited technical context listed above; it never includes journal content automatically.</li>
         <li><strong>Google Sign-In</strong> — Authentication for Google Drive backup only. Basic profile info (name, email) is used locally to show the connected account.</li>
         <li><strong>Google Drive API</strong> — Used only if you opt into Google Drive backup. Minimum scope for a single app-specific file.</li>
         <li><strong>Apple CloudKit / iCloud</strong> — Used only if you opt into iCloud backup on iOS.</li>
@@ -187,12 +192,12 @@
     </ul>
 
     <h2>Data Sharing</h2>
-    <p>We do not sell, trade, or share your data with third parties. We do not serve advertisements. We do not use ad tracking or retargeting. Anonymous analytics and crash data are processed by Google Firebase under their data processing terms — this data cannot identify you and contains no journal content.</p>
+    <p>We do not sell or trade your data, serve advertisements, or use ad tracking or retargeting. Analytics, crash reports, the Founding counter, and feedback you choose to send are processed by Google Firebase under its data-processing terms. No journal content is included in these services automatically.</p>
 
     <h2>Children's Privacy</h2>
-    <p>Folio is not directed at children under 13. We do not knowingly collect data from children. Since no personal data is collected from any user, the App is compliant with COPPA.</p>
+    <p>Folio is not directed at children under 13. We do not knowingly collect personal data from children. A parent or guardian who believes a child submitted feedback can contact us to request deletion.</p>
 
-    <h2>Your Rights</h2>
+    <h2 id="deletion">Your Rights</h2>
     <p>You have full control over your data:</p>
     <ul>
         <li><strong>Delete app data</strong> — Clear the app's storage in your device Settings, or uninstall the app.</li>
@@ -200,11 +205,10 @@
         <li><strong>Delete iCloud backup</strong> — Remove the backup from your iCloud storage via iOS Settings.</li>
         <li><strong>Revoke Google Sign-In</strong> — Disconnect from the App's settings, or revoke access from your Google Account permissions page.</li>
         <li><strong>Cancel subscriptions</strong> — Manage or cancel your Folio Plus subscription at any time through your device's account settings (App Store or Google Play).</li>
+        <li><strong>Delete submitted feedback</strong> — Contact us from the optional email included with the note and provide the approximate submission date. Feedback still queued on your phone is deleted by “Erase everything,” clearing app storage, or uninstalling.</li>
     </ul>
-    <p>Since we don't collect personal data on our servers, there is nothing to request deletion of on our end.</p>
-
     <h2>Data Retention</h2>
-    <p>We do not retain any personal data. Anonymous crash reports and analytics data are retained by Firebase for up to 90 days and cannot be linked to individual users. The Founding Circle counter is a single integer with no expiry — it contains no personal information.</p>
+    <p>Crash reports and analytics data are retained by Firebase according to the configured retention period, normally up to 90 days. Feedback is normally retained for up to 12 months unless it is needed longer to resolve an active support issue or meet a legal obligation. The Founding Circle counter is a single integer with no expiry and contains no personal information.</p>
 
     <h2>Security</h2>
     <p>Your journal data is stored in the app's private sandboxed storage, inaccessible to other apps. If you enable App Lock, biometric or device credential authentication is required to access the app. Backup transfers use encrypted connections (HTTPS/TLS). Purchase entitlements are stored locally on-device and are not transmitted to external servers.</p>
