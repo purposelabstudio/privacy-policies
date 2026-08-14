@@ -131,7 +131,7 @@
     <p>This policy applies to both the Android (Google Play) and iOS (App Store) versions of Folio.</p>
 
     <div class="highlight">
-        <p>We never read, access, analyze, or transmit your journal entries. Your writing stays yours.</p>
+        <p>By default, Folio keeps your notebook on your device. If you turn on backup, Folio copies it only to the personal Google Drive or iCloud account you choose. Your notebook is never sent to Folio or PurposeLab servers or shared with unrelated third parties.</p>
     </div>
 
     <h2>Data We Collect</h2>
@@ -145,8 +145,9 @@
     </ul>
 
     <h2>Data Storage</h2>
-    <p>All your journal entries, daily marks, monthly themes, habits, and preferences are stored locally in Folio's private app sandbox using SQLite. The operating system protects the app sandbox and device storage; you can also enable Folio's App Lock. This data never leaves your device unless you explicitly choose to back it up.</p>
-    <p><strong>Home screen widgets:</strong> If you add Folio widgets to your home screen, a subset of your data (recent entries, habit scores, streak counts, mood, and palette colours) is shared from the App to the widget extension via on-device shared storage (SharedPreferences on Android, App Group container on iOS). This data never leaves your device and is inaccessible to other apps.</p>
+    <p>Your journal entries, moods, habits and marks, monthly themes, tags, bookmarks, things to do, photographs, voice notes, and preferences are stored locally in Folio's private app sandbox. The operating system protects the app sandbox and device storage; you can also enable Folio's App Lock.</p>
+    <p>By default, notebook content stays on your device. It leaves only when you deliberately choose one of these actions: back up to your personal cloud account, export a copy, or share something through another app. For export and sharing, you choose the destination and that destination's privacy terms apply.</p>
+    <p><strong>Home screen widgets:</strong> If you add Folio widgets to your home screen, a subset of your data (recent entries, habit marks, moods, open todo titles, and palette colours) is shared from the App to the widget extension through on-device shared storage (SharedPreferences on Android, App Group container on iOS). This widget data is not sent to Folio or PurposeLab servers.</p>
 
     <h2>Purchases &amp; Entitlements</h2>
     <p>When you make an in-app purchase or subscribe to Folio Plus, the transaction is processed entirely by Apple (via StoreKit) or Google (via Play Billing). Folio never sees, collects, or stores your payment card details, billing address, or financial information.</p>
@@ -160,9 +161,11 @@
     <p>Feedback is normally retained for up to 12 months for support and product-improvement purposes. If you included an email address, you may request early deletion by contacting us from that address and providing the approximate submission date. Anonymous notes may not be identifiable after submission.</p>
 
     <h2>Backup &amp; Sync</h2>
-    <p><strong>Google Drive Backup (Android &amp; iOS):</strong> If you choose to enable backup, your data is transferred directly between your device and your personal Google Drive account. PurposeLab does not have access to your Google Drive or your backed-up data. We request the minimum scope needed to read/write a single app-specific backup file.</p>
-    <p><strong>iCloud Backup (iOS):</strong> If you choose to enable iCloud backup, your data is stored in your personal iCloud account using Apple's CloudKit infrastructure. PurposeLab does not have access to your iCloud data.</p>
-    <p>Both backup options are entirely optional. The App works fully offline without any backup configured.</p>
+    <p>If you enable backup, Folio copies your notebook only to the personal Google Drive or iCloud account you choose. A backup can contain journal entries, moods, habits, themes, tags, bookmarks, things to do, photographs, voice notes, and the settings needed to restore the notebook. Folio stores these as a database snapshot and separate attachment files.</p>
+    <p><strong>Google Drive Backup (Android &amp; iOS):</strong> Backup files are transferred directly between your device and a visible <code>Folio Backups</code> folder in your personal Google Drive. Folio requests the limited Drive access needed to create, read, and remove the backup files it manages.</p>
+    <p><strong>iCloud Backup (iOS):</strong> Backup files are transferred between your device and Folio's private folder in your personal iCloud Drive account.</p>
+    <p>PurposeLab cannot browse or read either personal account. Notebook content is never sent to Folio or PurposeLab servers, and it is not shared with unrelated third parties. Google or Apple stores the copy you asked for under the terms and security of the account you chose.</p>
+    <p>Backup is optional. Folio's core writing, attachment, habit, mood, and todo features work offline without a backup account.</p>
 
     <h2>Authentication</h2>
     <p><strong>Google Sign-In:</strong> Used solely to authenticate your identity for Google Drive backup and restore. We access only your basic profile (name and email) to display which account is connected. We do not store your Google credentials, and your account information is not transmitted to our servers or used for any other purpose. You can disconnect at any time from the App's settings.</p>
@@ -175,6 +178,8 @@
     <ul>
         <li><strong>Notifications (Android 13+ / iOS)</strong> — To send a gentle evening reminder to write your daily page. You can deny or disable this at any time in device Settings.</li>
         <li><strong>Biometric / Face ID / Device Credentials</strong> — Only requested if you enable App Lock. Used solely to authenticate you locally — no biometric data is collected, stored, or transmitted by the App.</li>
+        <li><strong>Selected photographs</strong> — Folio uses the Android or iOS system photo picker, so you choose each photograph the App may import. Folio does not request broad access to your photo library. Imported photographs are resized, converted to JPEG, and stored without location, camera, or other embedded metadata.</li>
+        <li><strong>Microphone</strong> — Requested only when you choose to record a voice note. Recordings are stored locally by default and are included only in a backup you explicitly enable to your personal Google Drive or iCloud account.</li>
         <li><strong>Internet Access</strong> — Required only for optional backup (Google Drive / iCloud), in-app purchases, Founding Circle claim, feedback you choose to send, remote configuration, and crash/analytics reporting. The core journaling experience works fully offline.</li>
     </ul>
 
@@ -184,15 +189,16 @@
         <li><strong>Firebase Analytics</strong> (Google) — Anonymous, aggregated usage events and user properties. No PII or journal content is collected.</li>
         <li><strong>Cloud Firestore</strong> (Google) — Used for the anonymous Founding Circle counter and for feedback/support notes you explicitly send. Feedback may contain an optional reply-to email and the limited technical context listed above; it never includes journal content automatically.</li>
         <li><strong>Google Sign-In</strong> — Authentication for Google Drive backup only. Basic profile info (name, email) is used locally to show the connected account.</li>
-        <li><strong>Google Drive API</strong> — Used only if you opt into Google Drive backup. Minimum scope for a single app-specific file.</li>
-        <li><strong>Apple CloudKit / iCloud</strong> — Used only if you opt into iCloud backup on iOS.</li>
+        <li><strong>Google Drive API</strong> — Used only if you opt into Google Drive backup. Folio creates and reads the backup files it manages in your personal Drive.</li>
+        <li><strong>Apple iCloud Drive</strong> — Used only if you opt into iCloud backup on iOS. Folio stores backup files in its private iCloud container.</li>
         <li><strong>Google Play Billing / Apple StoreKit</strong> — Used for subscriptions or one-time purchases. Google/Apple processes payment information directly — Folio never sees or stores your payment details.</li>
         <li><strong>Play Install Referrer</strong> (Google, Android only) — One-time anonymous read of install referral parameters on first launch.</li>
         <li><strong>In-App Update</strong> (Google, Android only) — Checks for available app updates via the Play Store. No user data is shared.</li>
     </ul>
 
     <h2>Data Sharing</h2>
-    <p>We do not sell or trade your data, serve advertisements, or use ad tracking or retargeting. Analytics, crash reports, the Founding counter, and feedback you choose to send are processed by Google Firebase under its data-processing terms. No journal content is included in these services automatically.</p>
+    <p>We do not sell or trade your data, serve advertisements, or use ad tracking or retargeting. Your notebook is never sent to Folio or PurposeLab servers or shared with unrelated third parties. Google or Apple receives notebook content only as the storage provider for a backup you explicitly place in the personal account you choose.</p>
+    <p>Analytics, crash reports, the anonymous Founding counter, and feedback you choose to send are separate from notebook backup and are processed by Google Firebase under its data-processing terms. Folio never attaches journal text, todo titles, photographs, voice recordings, tags, moods, or habit names to analytics, crash reports, or feedback automatically.</p>
 
     <h2>Children's Privacy</h2>
     <p>Folio is not directed at children under 13. We do not knowingly collect personal data from children. A parent or guardian who believes a child submitted feedback can contact us to request deletion.</p>
@@ -201,8 +207,8 @@
     <p>You have full control over your data:</p>
     <ul>
         <li><strong>Delete app data</strong> — Clear the app's storage in your device Settings, or uninstall the app.</li>
-        <li><strong>Delete Google Drive backup</strong> — Remove the backup file directly from your Google Drive at any time.</li>
-        <li><strong>Delete iCloud backup</strong> — Remove the backup from your iCloud storage via iOS Settings.</li>
+        <li><strong>Delete Google Drive backup</strong> — Use Folio's backup controls to remove the copies it manages, or remove the <code>Folio Backups</code> folder from your personal Drive.</li>
+        <li><strong>Delete iCloud backup</strong> — Use Folio's backup controls to remove the copies it manages, or manage Folio's iCloud storage through iOS Settings.</li>
         <li><strong>Revoke Google Sign-In</strong> — Disconnect from the App's settings, or revoke access from your Google Account permissions page.</li>
         <li><strong>Cancel subscriptions</strong> — Manage or cancel your Folio Plus subscription at any time through your device's account settings (App Store or Google Play).</li>
         <li><strong>Delete submitted feedback</strong> — Contact us from the optional email included with the note and provide the approximate submission date. Feedback still queued on your phone is deleted by “Erase everything,” clearing app storage, or uninstalling.</li>
@@ -211,7 +217,7 @@
     <p>Crash reports and analytics data are retained by Firebase according to the configured retention period, normally up to 90 days. Feedback is normally retained for up to 12 months unless it is needed longer to resolve an active support issue or meet a legal obligation. The Founding Circle counter is a single integer with no expiry and contains no personal information.</p>
 
     <h2>Security</h2>
-    <p>Your journal data is stored in the app's private sandboxed storage, inaccessible to other apps. If you enable App Lock, biometric or device credential authentication is required to access the app. Backup transfers use encrypted connections (HTTPS/TLS). Purchase entitlements are stored locally on-device and are not transmitted to external servers.</p>
+    <p>Your journal data is stored in the app's private sandboxed storage, inaccessible to other apps. If you enable App Lock, biometric or device credential authentication is required to access the app. Backup transfers use encrypted connections (HTTPS/TLS), and the copy is protected by the personal Google or Apple account you chose. Folio does not add separate end-to-end encryption to backup files, and App Lock does not encrypt the cloud copy. Anyone who can access that cloud account may be able to access its Folio backup files.</p>
 
     <h2>Contact</h2>
     <p>If you have questions about this privacy policy, contact us at: <a href="mailto:purposelab.studio@gmail.com">purposelab.studio@gmail.com</a></p>
