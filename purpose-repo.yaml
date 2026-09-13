@@ -1,0 +1,25 @@
+$schema: https://purposelab.dev/schemas/repository-manifest-v1.schema.json
+schemaVersion: 1
+repository:
+  id: privacy-policies
+  kind: legal
+  description: Public PurposeLab privacy policies and terms
+  paths:
+    source: .
+    policies: .
+harness:
+  defaultProfile: core
+  allowedProfiles:
+    - core
+    - legal-publishing
+    - website-maintenance
+  clients:
+    - github-copilot
+    - claude-code
+    - codex
+    - cursor
+    - gemini-cli
+    - antigravity
+    - agents
+  contextBudget: standard
+

@@ -1,1 +1,16 @@
 .DS_Store
+.purposelab/
+.vscode/mcp.json
+.gemini/settings.json
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+secrets/
+*.key
+*.pem
+*.p8
+*service-account*.json
+client_secret*.json
+credentials*.json
