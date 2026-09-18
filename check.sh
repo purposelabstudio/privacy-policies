@@ -36,8 +36,6 @@ void_elements = {
     "area", "base", "br", "col", "embed", "hr", "img", "input", "link",
     "meta", "param", "source", "track", "wbr",
 }
-
-
 class PageParser(HTMLParser):
     def __init__(self) -> None:
         super().__init__(convert_charrefs=True)
@@ -372,15 +370,21 @@ for page, parser in parsers.items():
             if not local_site_path:
                 external_http_links.add(href)
 
-# Folio keeps notebook content local by default. A cloud copy exists only when
-# the person explicitly asks Folio to use their own Google Drive or iCloud.
+# Zolio keeps notebook content local by default. A cloud copy exists only when
+# the person explicitly asks Zolio to use their own Google Drive or iCloud.
 for name in ("folio.html", "folio-terms.html"):
     text = (root / name).read_text(encoding="utf-8")
     if "personal Google Drive or iCloud account you choose" not in text:
-        fail(root / name, "Folio personal-cloud boundary missing")
+        fail(root / name, "Zolio personal-cloud boundary missing")
 folio = (root / "folio.html").read_text(encoding="utf-8")
-if "never sent to Folio or PurposeLab servers" not in folio:
-    fail(root / "folio.html", "Folio server boundary missing")
+if not any(
+    phrase in folio
+    for phrase in (
+        "never sent to Folio or PurposeLab servers",
+        "never sent to Zolio or PurposeLab servers",
+    )
+):
+    fail(root / "folio.html", "Zolio server boundary missing")
 if "never read, access, analyze, or transmit your journal entries" in folio:
     fail(root / "folio.html", "absolute no-transmission claim is not allowed")
 if not any(message.startswith("FAIL  folio") for message in failures):
@@ -407,6 +411,6 @@ if failures:
     raise SystemExit(1)
 print(
     f"PASS  {len(pages)} HTML pages: structure, metadata, headings, accessible names, "
-    "alt text, internal links, and Folio boundaries"
+    "alt text, internal links, and Zolio boundaries"
 )
 PY
